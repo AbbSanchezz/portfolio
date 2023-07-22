@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/e86e320e6f.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="shortcut icon" href="resources/css/imagenes/favicon.ico">
+  <title>Abril Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#estudios">Estudios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#hablemos">Contacto</a></li>
+        <li><a href="login" class="login" href="">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="contenedor_principal">
+
+    <section class="inicio" id="inicio">
+      <div class="row">
+        <div class="presentacion col-md-7">
+          <h2>Hola! Soy Abril Sanchez,
+            estudiante de programación</h2>
+          <p>Soy estudiante con sólidos conocimientos teóricos y prácticos en el
+            desarrollo de software. Busco oportunidades para aplicar mis habilidades y conocimientos en un
+            entorno laboral, aportando motivación, creatividad y capacidad de aprendizaje rápido.</p>
+          <button class="col-md-4">Descargar CV</button>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="imagen col-md-4">
+          <img class="img-fluid rounded-circle" src="resources/css/imagenes/abril.png">
+        </div>
+      </div>
+    </section>
+
+    <section class="estudios" id="estudios">
+      <div class="row">
+        <h3 class="col-md-12">Estudios</h3>
+        <hr>
+        <div class="post">
+          <% datos.estudios.forEach(function(estudio) { %>
+          <h4><%= estudio.titulo %></h4>
+          <div class="info-estudios">
+            <p><%= estudio.anio %></p>
+            <p>|</p>
+            <p><%= estudio.institucion %></p>
+          </div>
+          <% }); %>
+        </div>
+        <hr>
+      </div>
+    </section>
+
+    <section class="proyectos" id="proyectos">
+      <div class="row">
+        <h3 class="col-md-12">Proyectos</h3>
+        <div class="proyecto row">
+          <% datos.proyectos.forEach(function(proyecto) { %>
+          <div class="imagen-proyectos col-md-2">
+            <img src="resources/css/imagenes/proyecto.png">
+          </div>
+          <div class="info-proyectos col-md-10">
+            <h3><%= proyecto.titulo %></h3>
+            <h6><%= proyecto.anio %></h6>
+            <p><%= proyecto.descripcion %></p>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </section>
+    <hr>
+
+    <section class="tecnologias row">
+      <p class="col-md-12 mis-tech">Mis tecnologias 😊</p>
+      <% datos.tecnologias.forEach(function(tecnologia) { %>
+      <div class="caja-tech col-md-2">
+        <h4><%= tecnologia.titulo %></h4>
+        <p><%= tecnologia.descripcion %></p>
+      </div>
+      <% }); %>
+    </section>
+
+    <hr>
+    <section class="hablemos row" id="hablemos">
+      <h3 class="col-md-12">¡Hablemos!</h3>
+      <form class="col-md-6">
+        <label> Nombre y apellido</label>
+        <input required class="form-control" type="text" placeholder="Mariana Martinez">
+        <label>Email </label>
+        <input required class="form-control" type="email" placeholder="marianamartinez@gmail.com">
+        <label>Mensaje</label>
+        <textarea required class="form-control" type="text" placeholder="Tu mensaje 🤗"></textarea>
+        <button>Enviar</button>
+      </form>
+      <hr>
+    </section>
+  </div>
+
+  <footer>
+    <div class="redes">
+      <a href="https://www.instagram.com/aby.snchez/" target="_blank">
+        <i class="fa-brands fa-square-instagram fa-2xl"></i></a>
+      <a href="https://github.com/AbbSanchezz/" target="_blank">
+        <i class="fa-brands fa-square-github fa-2xl"></i></a>
+      <a href="https://www.linkedin.com/in/deniseabrilsanchez/" target="_blank">
+        <i class="fa-brands fa-linkedin fa-2xl"></i></a>
+      <a href="https://wa.link/jxgltk" target="_blank">
+        <i class="fa-brands fa-whatsapp-square fa-2xl"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+
+</html>

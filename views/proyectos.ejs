@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="shortcut icon" href="resources/css/imagenes/favicon.ico">
+  <link href="resources/css/style-login.css" rel="stylesheet">
+  <title>Proyectos</title>
+</head>
+
+<body>
+  <div class="row formulario">
+
+    <div class="col-md-4">
+      <h4 class="formulario">Agregar proyectos</h4>
+      <form action="proyectos" method="post" class="formulario login-form">
+        <label for="tituloProyecto">Titulo</label>
+        <input class="form-control log" name="tituloProyecto" type="text">
+
+        <label for="anioProyecto">Año</label>
+        <input class="form-control log" name="anioProyecto" type="text">
+
+        <label for="descripcionProyecto">Descripcion</label>
+        <input class="form-control log" name="descripcionProyecto" type="text">
+
+        <!-- <label for="fotoProyecto">Foto</label>
+                <input class="form-control log" name="fotoProyecto" type="text"> -->
+
+        <input class="btn-login btn btn-primary" type="submit" value="Guardar">
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
